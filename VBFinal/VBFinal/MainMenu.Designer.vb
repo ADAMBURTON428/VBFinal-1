@@ -30,6 +30,7 @@ Partial Class MainMenu
         Me.picTurtleGames = New System.Windows.Forms.PictureBox()
         Me.lblName = New System.Windows.Forms.Label()
         Me.picLogo2 = New System.Windows.Forms.PictureBox()
+        Me.tmrGravity = New System.Windows.Forms.Timer(Me.components)
         CType(Me.picTurtleGames, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogo2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -99,6 +100,10 @@ Partial Class MainMenu
         Me.picLogo2.TabStop = False
         Me.picLogo2.Visible = False
         '
+        'tmrGravity
+        '
+        Me.tmrGravity.Interval = 20
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -112,6 +117,7 @@ Partial Class MainMenu
         Me.Controls.Add(Me.lblTurtleGames)
         Me.Controls.Add(Me.picTurtleGames)
         Me.Name = "MainMenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "MainMenu"
         CType(Me.picTurtleGames, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picLogo2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -126,5 +132,6 @@ Partial Class MainMenu
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents lblName As System.Windows.Forms.Label
     Friend WithEvents picLogo2 As System.Windows.Forms.PictureBox
+    Friend WithEvents tmrGravity As System.Windows.Forms.Timer
 
 End Class
